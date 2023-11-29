@@ -1,16 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="./css/main.css">
-   <title>Dictionary</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Dictionary</title>
+  </head>
 
-<body>
-   
+  <body>
+    <div class="app">
+      <main class="main">
+        <h1 class="title">Your best <span>Dictionaty</span></h1>
 
+        <form class="form">
+          <div class="form-group">
+            <input
+              type="text"
+              placeholder="Type a word..."
+              name="word"
+              id="word-input"
+              value=""
+            />
+          </div>
+          <button class="form-btn" type="submit">Search</button>
+        </form>
 
-   <script src="./js/main.js"></script>
-</body>
+        <div class="error">Word not found</div>
+
+        <div class="results">
+          <div class="results-info">
+            <div class="results-word">word</div>
+            <div class="resulr-sound">
+              <div id="customAudio">
+               <p></p>
+                <audio
+                  id="audio"
+                  src="https://api.dictionaryapi.dev/media/pronunciations/en/head-uk.mp3"
+                ></audio>
+                <div id="playPauseButton">▶️</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="results-list">
+          <div class="result-item">
+            <div class="results-item__part">Noun</div>
+            <div class="result-item__defenitions">
+              <div class="result-item__defenition">
+                <p>lerghbhhd dhhdbhb dghdfbhbd dfhbh</p>
+                <div class="results-item__example">
+                  OLOLOL OLOLOL OLOLOL OLOL
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="./js/main.js"></script>
+  </body>
 </html>

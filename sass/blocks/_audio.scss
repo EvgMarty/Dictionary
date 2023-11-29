@@ -1,0 +1,16 @@
+#customAudio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  background-color: #f1f1f1;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-align: center;
+  border: 1px solid #2185d0;
+}
+
+#playPauseButton {
+  font-size: 24px;
+  cursor: pointer;
+}

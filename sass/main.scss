@@ -1,7 +1,13 @@
 //Base
-@import "./base/base";
-@import "./base/reset";
-@import "./base/vars";
+@import './base/base';
+@import './base/reset';
+@import './base/vars';
 
 //Blocks
-@import "./blocks/titles";
+@import './blocks/titles';
+@import './blocks/app';
+@import './blocks/main';
+@import './blocks/form';
+@import './blocks/results';
+@import './blocks/results-list';
+@import './blocks/audio';
