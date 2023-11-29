@@ -32,8 +32,13 @@
   }
 }
 
-.error {
+.not-found {
   font-size: 20px;
-  view-timeline: 500;
+  font-weight: 500;
   color: #dd6464;
+  display: none;
+
+  &.error {
+    display: block;
+  }
 }
