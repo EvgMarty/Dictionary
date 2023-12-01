@@ -36,9 +36,8 @@
   font-size: 20px;
   font-weight: 500;
   color: #dd6464;
-  display: none;
 
-  &.error {
-    display: block;
+  &.hidden {
+    display: none;
   }
 }

@@ -151,10 +151,13 @@ legend {
   font-size: 20px;
   font-weight: 500;
   color: #dd6464;
+}
+.not-found.hidden {
   display: none;
 }
-.not-found.error {
-  display: block;
+
+.allResult.hidden {
+  display: none;
 }
 
 .results {

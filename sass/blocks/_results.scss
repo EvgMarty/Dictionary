@@ -1,3 +1,9 @@
+.allResult {
+  &.hidden {
+    display: none;
+  }
+}
+
 .results {
   border-radius: 6px;
   color: rgb(74, 74, 74);

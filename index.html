@@ -25,36 +25,26 @@
           <button class="form-btn" type="submit">Search</button>
         </form>
 
-        <div class="not-found"></div>
+        <div class="not-found hidden"></div>
 
-        <div class="results">
-          <div class="results-info">
-            <div class="results-word"></div>
-            <div class="resulr-sound">
-              <div id="customAudio">
-                <p></p>
-                <audio
-                  id="audio"
-                  src="https://api.dictionaryapi.dev/media/pronunciations/en/head-uk.mp3"
-                ></audio>
-                <div id="playPauseButton">▶️</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="results-list">
-          <div class="result-item">
-            <div class="results-item__part">Noun</div>
-            <div class="result-item__defenitions">
-              <div class="result-item__defenition">
-                <p>lerghbhhd dhhdbhb dghdfbhbd dfhbh</p>
-                <div class="results-item__example">
-                  OLOLOL OLOLOL OLOLOL OLOL
+        <div class="allResult hidden">
+          <div class="results">
+            <div class="results-info">
+              <div class="results-word"></div>
+              <div class="resulr-sound">
+                <div id="customAudio">
+                  <p></p>
+                  <audio
+                    id="audio"
+                    src="https://api.dictionaryapi.dev/media/pronunciations/en/head-uk.mp3"
+                  ></audio>
+                  <div id="playPauseButton">▶️</div>
                 </div>
               </div>
             </div>
           </div>
+
+          <div class="results-list"></div>
         </div>
       </main>
     </div>

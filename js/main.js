@@ -1,9 +1,10 @@
 // ==========   Get data  ===============
-
 const URL = 'https://api.dictionaryapi.dev/api/v2/entries/en/';
 const input = document.getElementById('word-input');
 const form = document.querySelector('.form');
 const notFound = document.querySelector('.not-found');
+const allResult = document.querySelector('.allResult');
+const resultsList = document.querySelector('.results-list');
 let containetWord = document.querySelector('.results-word');
 
 let state = {
@@ -15,7 +16,6 @@ let state = {
 
 const insertWord = () => {
   containetWord.innerHTML = state.word;
-  console.log(state);
 };
 
 const handleSubmit = async (e) => {
@@ -57,9 +57,37 @@ const handleKeyUp = (e) => {
 const notFounds = () => {
   if (state.error) {
     notFound.innerText = `Word "${state.word}" not found`;
-    notFound.classList.add('error');
+    notFound.classList.remove('hidden');
+    showResults();
   } else {
-    notFound.classList.remove('error');
+    notFound.classList.add('hidden');
+    showResults();
+  }
+};
+
+const renderItem = (item) => {
+  const itemDefinition = item.definitions[0];
+  return `<div class="results-list">
+                  <div class="result-item">
+                    <div class="results-item__part">${item.partOfSpeech}</div>
+                    <div class="result-item__defenitions">
+                      <div class="result-item__defenition">
+                        <p>${itemDefinition.definition}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>`;
+};
+
+const showResults = () => {
+  if (state.word.length && !state.error) {
+    allResult.classList.remove('hidden');
+    resultsList.innerHTML = '';
+    state.meanings.forEach(
+      (item) => (resultsList.innerHTML += renderItem(item))
+    );
+  } else {
+    allResult.classList.add('hidden');
   }
 };
 
@@ -100,9 +128,3 @@ playPauseButton.addEventListener('click', togglePlayPause);
 audio.addEventListener('ended', () => {
   playPauseButton.textContent = '▶️';
 });
-
-//TODO:
-// Get data
-// store data
-// audio playback functionality
-// display the data with the results
